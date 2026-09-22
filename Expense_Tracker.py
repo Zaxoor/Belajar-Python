@@ -1,3 +1,5 @@
+# Expense Tracker
+
 expense = [
     {"deskripsi": "Makan", "harga": 25000},
     {"deskripsi": "Bensin", "harga": 50000},

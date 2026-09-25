@@ -70,7 +70,7 @@ while running:
             for i, option in enumerate(question['pilihan'], start=1):
                 print(f"{i}. {option}")
             answer = input("Masukkan jawaban Anda (1/2/3/...): ")
-            if answer == "1":
+            if question["pilihan"][int(answer) - 1] == question["jawaban"]:
                 print("")
                 print("Jawaban Anda benar!")
                 skor += 1

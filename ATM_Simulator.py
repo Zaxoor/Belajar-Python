@@ -33,21 +33,21 @@ while running:
             print("Deposit successful.")
             print("")
     elif option == "3":
+        print("")
+        print("==== WITHDRAW ====")
+        print("")
+        withdraw = int(input("Input your withdraw: "))
+        if withdraw >= saldo or withdraw <= 0 or saldo - withdraw < 50000:
             print("")
-            print("==== WITHDRAW ====")
+            print("invalid withdraw amount.")
+            print("Your balance cannot be 0.")
+            print("Your minimum balance value after withdraw is Rp.50.000,00")
             print("")
-            withdraw = int(input("Input your withdraw: "))
-            if withdraw >= saldo or withdraw <= 0 or saldo - withdraw < 50000:
-                print("")
-                print("invalid withdraw amount.")
-                print("Your balance cannot be 0.")
-                print("Your minimum balance value after withdraw is Rp.50.000,00")
-                print("")
-            else:
-                saldo -= withdraw 
-                print("")
-                print("Withdraw successful")
-                print("")
+        else:
+            saldo -= withdraw 
+            print("")
+            print("Withdraw successful")
+            print("")
     elif option == "4":
         running = False
         print("")

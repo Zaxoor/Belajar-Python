@@ -1,0 +1,22 @@
+[
+    {
+        "deskripsi": "Makan",
+        "harga": 25000,
+        "kategori": "Food"
+    },
+    {
+        "deskripsi": "Bensin",
+        "harga": 50000,
+        "kategori": "Transport"
+    },
+    {
+        "deskripsi": "Kopi",
+        "harga": 25000,
+        "kategori": "Food"
+    },
+    {
+        "deskripsi": "Jasjus",
+        "harga": 10000,
+        "kategori": "Food"
+    }
+]

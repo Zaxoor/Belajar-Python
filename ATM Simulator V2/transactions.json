@@ -1,0 +1,25 @@
+{
+    "saldo": 250000,
+    "transactions": [
+        {
+            "jenis": "Deposit",
+            "nominal": 50000
+        },
+        {
+            "jenis": "Deposit",
+            "nominal": 100000
+        },
+        {
+            "jenis": "Deposit",
+            "nominal": 50000
+        },
+        {
+            "jenis": "Withdraw",
+            "nominal": 100000
+        },
+        {
+            "jenis": "Deposit",
+            "nominal": 50000
+        }
+    ]
+}

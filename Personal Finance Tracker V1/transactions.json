@@ -1,0 +1,17 @@
+[
+    {
+        "jenis": "Income",
+        "deskripsi": "Uang Saku",
+        "nominal": 50000
+    },
+    {
+        "jenis": "Expense",
+        "deskripsi": "Makan Siang",
+        "nominal": 20000
+    },
+    {
+        "jenis": "Income",
+        "deskripsi": "Uang Bensin",
+        "nominal": 100000
+    }
+]

@@ -2,16 +2,25 @@
     {
         "jenis": "Income",
         "deskripsi": "Uang Saku",
-        "nominal": 50000
+        "nominal": 50000,
+        "kategori": "Pocket Money"
     },
     {
         "jenis": "Expense",
         "deskripsi": "Makan Siang",
-        "nominal": 20000
+        "nominal": 20000,
+        "kategori": "Food"
     },
     {
         "jenis": "Income",
         "deskripsi": "Uang Bensin",
-        "nominal": 100000
+        "nominal": 50000,
+        "kategori": "Transport"
+    },
+    {
+        "jenis": "Expense",
+        "deskripsi": "Kalkulator",
+        "nominal": 80000,
+        "kategori": "Education"
     }
 ]

@@ -22,5 +22,17 @@
         "deskripsi": "Kalkulator",
         "nominal": 80000,
         "kategori": "Education"
+    },
+    {
+        "jenis": "Income",
+        "deskripsi": "Uang Ngopi",
+        "nominal": 100000,
+        "kategori": "Food"
+    },
+    {
+        "jenis": "Expense",
+        "deskripsi": "Kopi Kenangan",
+        "nominal": 30000,
+        "kategori": "Food"
     }
 ]

@@ -37,7 +37,8 @@ def show_average():
             print(f"{nomor}. {student['nama']} | Rata-rata: {rata_rata:.2f}")
 
 def find_highest_grade():
-    highest = 0
+    highest = max(students[0]['nilai'])
+    name_highest = students[0]['nama']
     for student in students:
         if max(student['nilai']) > highest:
             highest = max(student['nilai'])

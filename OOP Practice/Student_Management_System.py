@@ -39,8 +39,45 @@ class StudentManager():
         for mahasiswa in self.daftar_mahasiswa.values():
             print(mahasiswa)
 
+    def cari_mahasiswa(self, nim):
+        if nim in self.daftar_mahasiswa:
+            return self.daftar_mahasiswa[nim]
+        else:
+            return None
+
+    def hapus_mahasiswa(self, nim):
+        if nim in self.daftar_mahasiswa:
+            del self.daftar_mahasiswa[nim]
+            return True
+        else:
+            return False
+
+    def edit_mahasiswa(self, nim, nama_baru, nilai_baru):
+        mahasiswa = self.cari_mahasiswa(nim)
+        if mahasiswa is None:
+            return False
+        else:
+            mahasiswa.nama = nama_baru
+            mahasiswa.daftar_nilai = nilai_baru
+            return True
+
 manager = StudentManager()
 s1 = Student("Hasbi", "2410511001", [80, 90, 85])
 print(manager.tambah_mahasiswa(s1))  # harusnya True
 print(manager.tambah_mahasiswa(s1))  # harusnya False (duplikat)
 manager.tampilkan_semua()
+print("")
+
+print(manager.cari_mahasiswa("2410511001"))   # data Hasbi lengkap
+print(manager.cari_mahasiswa("9999"))         # None
+print(manager.hapus_mahasiswa("2410511001"))  # True
+print(manager.hapus_mahasiswa("2410511001"))  # False (udah kehapus)
+manager.tampilkan_semua()                     # kosong
+print("")
+
+s2 = Student("Budi", "2410511002", [60, 70, 65])
+manager.tambah_mahasiswa(s2)
+
+print(manager.edit_mahasiswa("2410511002", "Budi Santoso", [80, 85, 90]))  # True
+print(manager.edit_mahasiswa("9999", "Siapa", [100]))                     # False
+manager.tampilkan_semua()   # Budi Santoso, status berubah jadi Lulus

@@ -1,3 +1,4 @@
+# ===== 1. CLASS (logika, tanpa input/print buat user) ===== #
 class Student:
     jumlah_mahasiswa = 0
 
@@ -61,23 +62,71 @@ class StudentManager():
             mahasiswa.daftar_nilai = nilai_baru
             return True
 
-manager = StudentManager()
-s1 = Student("Hasbi", "2410511001", [80, 90, 85])
-print(manager.tambah_mahasiswa(s1))  # harusnya True
-print(manager.tambah_mahasiswa(s1))  # harusnya False (duplikat)
-manager.tampilkan_semua()
-print("")
+# ===== 2. FUNCTION MENU (urusan input/print ke user) ===== #
+def tampilkan_menu():
+    print("=== STUDENT MANAGEMENT SYSTEM ===")
+    print("1. Tambah Mahasiswa")
+    print("2. Tampilkan Semua Mahasiswa")
+    print("3. Cari Mahasiswa")
+    print("4. Edit Mahasiswa")
+    print("5. Hapus Mahasiswa")
+    print("6. Keluar")
 
-print(manager.cari_mahasiswa("2410511001"))   # data Hasbi lengkap
-print(manager.cari_mahasiswa("9999"))         # None
-print(manager.hapus_mahasiswa("2410511001"))  # True
-print(manager.hapus_mahasiswa("2410511001"))  # False (udah kehapus)
-manager.tampilkan_semua()                     # kosong
-print("")
+def menu_tambah(manager):
+    print("\n=== TAMBAH MAHASISWA ===")
+    nama = input("Masukkan nama: ")
+    while True:
+        nim = input("Masukkan NIM: ")
+        if manager.cari_mahasiswa(nim) is not None:
+            print("NIM sudah digunakan, silahkan gunakan NIM lain.")
+        else:
+            break
+    while True:
+        nilai = input("Masukkan daftar nilai: ")
+        try:
+            potongan = nilai.split(",")
+            daftar_nilai = []
+            for item in potongan:
+                angka = int(item)
+                daftar_nilai.append(angka)
+            break
+        except ValueError:
+            print("Mohon masukkan angka untuk daftar nilai.")
+    mahasiswa = Student(nama, nim, daftar_nilai)
+    manager.tambah_mahasiswa(mahasiswa)
+    print("Mahasiswa berhasil ditambahkan!")
 
-s2 = Student("Budi", "2410511002", [60, 70, 65])
-manager.tambah_mahasiswa(s2)
+# ===== 3. MAIN (pengatur alur) ===== #
+def main():
+    manager = StudentManager()
+    while True:
+        tampilkan_menu()
+        opsi_menu = input("Pilih Menu: ")
+        
+        if opsi_menu == "1":
+            print("Coming soon!")
+        elif opsi_menu == "2":
+            print("Coming soon!")
+        elif opsi_menu == "3":
+            print("Coming soon!")
+        elif opsi_menu == "4":
+            print("Coming soon!")
+        elif opsi_menu == "5":
+            print("Coming soon!")
+        elif opsi_menu == "6":
+            print("Terima kasih sudah menggunakan program kami!")
+            break
+        else:
+            print("Pilihan tidak valid!")
 
-print(manager.edit_mahasiswa("2410511002", "Budi Santoso", [80, 85, 90]))  # True
-print(manager.edit_mahasiswa("9999", "Siapa", [100]))                     # False
-manager.tampilkan_semua()   # Budi Santoso, status berubah jadi Lulus
+# ===== 4. JALANKAN PROGRAM =====
+if __name__ == "__main__":
+    main()
+
+teks = "80,90,85"
+daftar_nilai = []
+potongan = teks.split(",")
+for item in potongan:
+    angka = int(item)
+    daftar_nilai.append(angka)
+print(daftar_nilai)
